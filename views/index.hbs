@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/estilos.css">
     <title>Form Spotify</title>
 </head>
+
 <body>
-    <h1>FORM SPOTIFY</h1>
+   <div class="formu">
+       <div class="esclavo">
     <form action="/artist-search" method="GET">
         <label>
-            <input type="text" name="artista">
+            <input class="input-estilo" type="text" name="artista">
         </label>
-        <button type="submit">
-            SEARCH FOR AN ARTIST
+        <button class="boton btn btn-danger" type="submit">
+            <p class="boton-text"> SEARCH FOR AN ARTIST</p>
         </button>
 
     </form>
+    </div>
+   </div>
 </body>
 </html>

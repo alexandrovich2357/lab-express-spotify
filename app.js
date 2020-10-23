@@ -1,4 +1,5 @@
 require('dotenv').config();
+const { response } = require('express');
 const express = require('express');
 const hbs = require('hbs');
 // require spotify-web-api-node package here:
@@ -30,6 +31,9 @@ app.get('/', (req, res, next) => {
 app.get('/artist-search', (req, res, next) => {
     let name = req.query.artista
     console.log(name)
+    if(!name){
+        res.render('index')
+    } 
     spotifyApi 
   . searchArtists (name) 
   . then ( data  =>  { 
